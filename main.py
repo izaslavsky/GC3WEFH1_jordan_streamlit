@@ -823,6 +823,7 @@ with tab2:
 
         with st.expander(preview_txt):
             st.write('Preview of ' + st.session_state.selected_dataset['dataset_name'])
+            display_df = None
             display_df = st.session_state.df
             display_df['Id'] = display_df['Id'].astype(str)
             display_df['Time'] = display_df['Time'].astype(str)
