@@ -10,3 +10,4 @@ scipy
 pandasai
 google-generativeai
 pyyaml
+fuzzywuzzy
