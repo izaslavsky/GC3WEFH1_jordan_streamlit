@@ -97,7 +97,7 @@ $\textsf{
 tab1, tab2 = st.tabs([map_label, LLM_label])
 
 with tab1:
-    
+
     # Choose map type with dropdown
     col1, col2, col3 = st.columns(3)
     map_type_choice = col1.selectbox("Choose a Topic", ["", "Household", "Climate","Healthcare","Administrative"])
@@ -365,7 +365,7 @@ with tab1:
 
             print(df.columns)
             print(gdf1.columns)
-           
+            
             hospital_col1, hospital_col2 = st.columns([1,1])
             filter_values = hospital_col1.multiselect("Filter Map by Governorat", df['Governorat'].unique(), default=df['Governorat'].unique())
             if filter_values:
@@ -697,9 +697,9 @@ with tab1:
         # st.session_state.selected_dataset_code = None
 
 with tab2:
+
+    # st.write('Dataset List Steps:')s
     
-        # st.write('Dataset List Steps:')s
-        
     # search datasets here
     search_input = st.text_input("Search WHO indicators") 
 
@@ -744,12 +744,11 @@ with tab2:
     just_jordan_data = st.checkbox('Show Jordan Data only')
 
     if 'just_jordan_data' not in st.session_state or just_jordan_data != st.session_state.just_jordan_data:
-         st.session_state.just_jordan_data = just_jordan_data
+            st.session_state.just_jordan_data = just_jordan_data
 
 
-# uploaded_file = st.file_uploader("Upload your dataset here (CSV)",type="csv")
-if 'selected_dataset' in st.session_state and st.session_state.selected_dataset is not None:
-    if 'dataset_type' in st.session_state.selected_dataset and st.session_state.selected_dataset['dataset_type'] == 'WHO':
+    # uploaded_file = st.file_uploader("Upload your dataset here (CSV)",type="csv")
+    if 'selected_dataset' in st.session_state and st.session_state.selected_dataset is not None:
         # Read the CSV file
         url = 'https://ghoapi.azureedge.net/api/' + st.session_state.selected_dataset['dataset_code'] 
 
@@ -780,30 +779,30 @@ if 'selected_dataset' in st.session_state and st.session_state.selected_dataset 
             if len(df.values) < 30:
                 range_str = ', '.join(unique_vals)
             else:
-                 range_str = None
+                    range_str = None
         
         print(df.columns)
         parsed_df = df[['Id', 'SpatialDimType', 'SpatialDim', 'TimeDimensionValue', 'Value']]
         parsed_df = parsed_df.rename(columns={'SpatialDimType' : 'Spatial_Scope', 'SpatialDim' : "Spatial_Entity",\
-                                               'TimeDimensionValue' : "Time", \
-                                               'Value' : 'value'
+                                                'TimeDimensionValue' : "Time", \
+                                                'Value' : 'value'
                                                 #'Value' : '_'.join(st.session_state.selected_dataset.split(' '))
                                                 })
 
         st.session_state.df = parsed_df
 
-    else:
-      
-        # Read the CSV file
-        print('here here ')
-        df = pd.read_csv(st.session_state.selected_dataset['file_path'])
-        print('did it get it')
-        print(len(df))
+    # else:
+        
+    #     # Read the CSV file
+    #     print('here here ')
+    #     df = pd.read_csv(st.session_state.selected_dataset['file_path'])
+    #     print('did it get it')
+    #     print(len(df))
 
-        # st.session_state.selected_dataset = st.session_state.selected_dataset['dataset_name']
+    #     # st.session_state.selected_dataset = st.session_state.selected_dataset['dataset_name']
 
-        st.session_state.df = df
-        st.session_state.dataset_type = 'loaded'
+    #     st.session_state.df = df
+    #     st.session_state.dataset_type = 'loaded'
         # Display the data
         # with st.expander("Preview"):
         #     st.write(df.head())
@@ -814,55 +813,57 @@ if 'selected_dataset' in st.session_state and st.session_state.selected_dataset 
         #         answer = generateResponse(dataFrame=df,prompt=user_input)
         #         st.write(answer)
 
-# Display the data
+    # Display the data
 
-if 'df' in st.session_state and 'selected_dataset' in st.session_state:
-    preview_txt = 'Data Information'
-    if 'dataset_type' in st.session_state and st.session_state.dataset_type == 'WHO':
-        preview_txt = "Dataset Information"
+    if 'df' in st.session_state and 'selected_dataset' in st.session_state:
+        preview_txt = 'Data Information'
+        if 'dataset_type' in st.session_state and st.session_state.dataset_type == 'WHO':
+            preview_txt = "Dataset Information"
 
 
-    with st.expander(preview_txt):
-        st.write('Preview of ' + st.session_state.selected_dataset['dataset_name'])
-        display_df = st.session_state.df
-        display_df['Id'] = display_df['Id'].astype(str)
-        display_df['Time'] = display_df['Time'].astype(str)
-        st.write(display_df.head())
+        with st.expander(preview_txt):
+            st.write('Preview of ' + st.session_state.selected_dataset['dataset_name'])
+            display_df = st.session_state.df
+            display_df['Id'] = display_df['Id'].astype(str)
+            display_df['Time'] = display_df['Time'].astype(str)
+            st.write(display_df.head())
 
-        if st.session_state.selected_dataset['dataset_type'] == 'WHO':
-            st.write("Indicator Information")
-            st.write("https://www.who.int/data/gho/data/indicators/indicator-details/GHO/" + st.session_state.selected_dataset['dataset_name'].replace(' ', '-'))
+            if st.session_state.selected_dataset['dataset_type'] == 'WHO':
+                st.write("Indicator Information")
+                url_dataset_name = st.session_state.selected_dataset['dataset_name'].replace(',', '')
+                url_dataset_name = url_dataset_name.replace('%', ' ')
+                url_dataset_name = url_dataset_name.replace(' ', '-')
+                st.write("https://www.who.int/data/gho/data/indicators/indicator-details/GHO/" + url_dataset_name)
 
-            st.write('Range of Values')
-            if range_str == None:
-                st.write('Too many values to list, use the chat interface for more details on the values.')
-            else:
-                 st.write(range_str)
+                st.write('Range of Values')
+                if range_str == None:
+                    st.write('Too many values to list, use the chat interface for more details on the values.')
+                else:
+                    st.write(range_str)
 
-if 'df' in st.session_state and st.session_state.df is not None:
-    
-    st.write(st.session_state.selected_dataset['dataset_name'])
-    schema_definitions = None
-    if st.session_state.selected_dataset['dataset_type'] == 'loaded' and \
-        (st.session_state.selected_dataset['dataset_name'] == 'country' or st.session_state.selected_dataset['dataset_name'] == 'governorate'):
-         country_schema = pd.read_csv('datasets/country_schema.csv')
-         schema_definitions = 'Here is a list of all the definitions per column: '
-         for x in country_schema.iterrows():
-              schema_definitions += 'The column ' + x[1]['column_name'] + ' means ' + x[1]['column_definition'] + '.' +\
-                ' If a user asks about topics related to ' + x[1]['column_definition'] + ', use column ' +  x[1]['column_name'] + '.'
-         
+    if 'df' in st.session_state and st.session_state.df is not None:
+        st.write(st.session_state.selected_dataset['dataset_name'])
+        schema_definitions = None
+        if st.session_state.selected_dataset['dataset_type'] == 'loaded' and \
+            (st.session_state.selected_dataset['dataset_name'] == 'country' or st.session_state.selected_dataset['dataset_name'] == 'governorate'):
+                country_schema = pd.read_csv('datasets/country_schema.csv')
+                schema_definitions = 'Here is a list of all the definitions per column: '
+                for x in country_schema.iterrows():
+                    schema_definitions += 'The column ' + x[1]['column_name'] + ' means ' + x[1]['column_definition'] + '.' +\
+                    ' If a user asks about topics related to ' + x[1]['column_definition'] + ', use column ' +  x[1]['column_name'] + '.'
+                
 
-    # Plot the data
-    user_input = st.text_input("Type your message here",placeholder="Ask me about your data")
-    if user_input:
-            prompt_input = 'The SpatialDim has the country alpha-3 codes. The value' + \
-            ' column means ' + st.session_state.selected_dataset['dataset_name'] + ' If you are unsure which column to use as the data, use value. ' + \
-            'If you create a graph using the Time column, make sure the values are in order.' + \
-            (schema_definitions if schema_definitions != None else '') + \
-            'If you receive an error, please print the error in full. Here is the user input : ' + user_input
-            print(prompt_input)
-            answer = generateResponse(dataFrame=st.session_state.df,prompt=prompt_input)
-            st.write(answer)
-            # 'If the user wants to map a dataset, use the geopandas function explore. Here is an example: geopandas.explore(df)' + \
+        # Plot the data
+        user_input = st.text_input("Type your message here",placeholder="Ask me about your data")
+        if user_input:
+                prompt_input = 'The SpatialDim has the country alpha-3 codes. The value' + \
+                ' column means ' + st.session_state.selected_dataset['dataset_name'] + ' If you are unsure which column to use as the data, use value. ' + \
+                'If you create a graph using the Time column, make sure the values are in order.' + \
+                (schema_definitions if schema_definitions != None else '') + \
+                'If you receive an error, please print the error in full. Here is the user input : ' + user_input
+                print(prompt_input)
+                answer = generateResponse(dataFrame=st.session_state.df,prompt=prompt_input)
+                st.write(answer)
+                # 'If the user wants to map a dataset, use the geopandas function explore. Here is an example: geopandas.explore(df)' + \
 
 
