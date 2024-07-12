@@ -4,6 +4,7 @@
 streamlit
 pandas
 geopandas
+folium
 streamlit_folium
 numpy
 scipy
