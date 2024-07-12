@@ -12,3 +12,4 @@ pandasai
 google-generativeai
 pyyaml
 fuzzywuzzy
+mapclassify
