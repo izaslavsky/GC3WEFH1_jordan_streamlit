@@ -1,0 +1,39 @@
+﻿Parameter,Description
+TOTPOP_CY,2022 Total Population
+POPDENS_CY ,2022 Population Density (Population per Square Kilometer) 
+POPPRM_CY,2022 Population Per Mill
+MALES_CY ,2022 Total Male Population
+FEMALES_CY,2022 Total Female Population
+TOTHH_CY ,2022 Total Households
+AVGHHSZ_CY,2022 Average Household Size
+PAGE01_CY ,2022 Total Population Age 0-14
+PAGE02_CY ,2022 Total Population Age 15-29
+PAGE03_CY ,2022 Total Population Age 30-44
+PAGE04_CY ,2022 Total Population Age 45-59
+PAGE05_CY,2022 Total Population Age 60+
+MAGE01_CY,2022 Male Population Age 0-14
+MAGE02_CY ,2022 Male Population Age 15-29
+MAGE03_CY ,2022 Male Population Age 30-44
+MAGE04_CY ,2022 Male Population Age 45-59
+MAGE05_CY ,2022 Male Population Age 60+ 
+FAGE01_CY ,2022 Female Population Age 0-14
+FAGE02_CY ,2022 Female Population Age 15-29 )
+FAGE03_CY ,2022 Female Population Age 30-44 )
+FAGE04_CY ,2022 Female Population Age 45-59 )
+FAGE05_CY ,2022 Female Population Age 60+ )
+MRST01_CY ,2022 Marital Status: Single
+MRST02_CY,2022 Marital Status: Married
+MRST03_CY ,2022 Marital Status: Divorced
+MRST04_CY ,2022 Marital Status: Widowed
+MRST_BASE ,2022 Marital Status Base
+EDUC01_CY,2022 Population Age 6+ by Education: No Education
+EDUC02_CY ,2022 Population Age 6+ by Education: Elementary
+EDUC03_CY ,2022 Population Age 6+ by Education: Preparatory
+EDUC04_CY ,2022 Population Age 6+ by Education: Secondary
+EDUC05_CY ,2022 Population Age 6+ by Education: Higher
+EDUC_BASE ,2022 Education Attainment Base
+UNEMP_CY ,2021 Unemployed Population
+PP_CY,2022 Purchasing Power: Total
+PPPRM_CY ,2022 Purchasing Power: Per Mill
+PPPC_CY ,2022 Purchasing Power: Per Capita
+PPIDX_CY ,2022 Purchasing Power: Index

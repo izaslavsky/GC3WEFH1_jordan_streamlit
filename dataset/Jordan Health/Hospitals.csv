@@ -1,0 +1,110 @@
+﻿Name,Governorat,Type,Number_bed,Occupancy,Total_Admi,Male_visit,Female_vis,Total_visi,Total_Surg,Latitude,Longitude
+King Abdallah Hospital,Irbid,Universities Hospitals,523.000000000000000,"68,3",n/a,n/a,n/a,n/a,n/a,32.501698310000002,35.993067979999999
+University Hospital,Amman,Universities Hospitals,577.000000000000000,77,n/a,n/a,n/a,n/a,n/a,32.006150480000002,35.874598159999998
+Eslame Hospital (Aqaba),Aqaba,Private Hospitals,46.000000000000000,"60,9",n/a,n/a,n/a,n/a,n/a,29.539874030000000,35.004696590000002
+New Aqaba,Aqaba,Private Hospitals,41.000000000000000,46,n/a,n/a,n/a,n/a,n/a,29.546712329999998,35.017443690000000
+Dlail Hospital,Zarqa,Private Hospitals,32.000000000000000,n/a,n/a,n/a,n/a,n/a,n/a,32.124505290000002,36.285101300000001
+Habaibeh Hospital,Zarqa,Private Hospitals,0.000000000000000,n/a,n/a,n/a,n/a,n/a,n/a,32.068045689999998,36.088253469999998
+Zarqa Al-Watani Hospital,Zarqa,Private Hospitals,30.000000000000000,n/a,n/a,n/a,n/a,n/a,n/a,32.063021319999997,36.084462580000000
+Qasr Shabeeb Hospital,Zarqa,Private Hospitals,70.000000000000000,"54,6",n/a,n/a,n/a,n/a,n/a,32.063021319999997,36.082890530000000
+Al-Hikma Al-Hadeeth Hospital,Zarqa,Private Hospitals,60.000000000000000,"56,8",n/a,n/a,n/a,n/a,n/a,32.053451389999999,36.093778110000002
+Jabal Zaytoon Hospital,Zarqa,Private Hospitals,123.000000000000000,"66,2",n/a,n/a,n/a,n/a,n/a,32.037628750000003,36.091550290000001
+Al-Razi Al-Jadeed Hospital,Zarqa,Private Hospitals,30.000000000000000,n/a,n/a,n/a,n/a,n/a,n/a,32.028886300000003,36.062992850000001
+Ebn Alnafees Hospital,Irbid,Private Hospitals,103.000000000000000,"11,5",n/a,n/a,n/a,n/a,n/a,32.538715439999997,35.803622269999998
+Najah Hospital,Irbid,Private Hospitals,15.000000000000000,37,n/a,n/a,n/a,n/a,n/a,32.533103629999999,35.843130180000003
+Takasese Hospital,Irbid,Private Hospitals,60.000000000000000,n/a,n/a,n/a,n/a,n/a,n/a,32.533951860000002,35.862291239999998
+Rahebat Hospital,Irbid,Private Hospitals,87.000000000000000,n/a,n/a,n/a,n/a,n/a,n/a,32.524999600000001,35.868480640000001
+Room Katholeek Hospital,Irbid,Private Hospitals,18.000000000000000,36,n/a,n/a,n/a,n/a,n/a,32.551853719999997,35.851978580000001
+Qwasme Hospital,Irbid,Private Hospitals,28.000000000000000,n/a,n/a,n/a,n/a,n/a,n/a,32.551376689999998,35.853523690000003
+Irbed Hospital,Irbid,Private Hospitals,15.000000000000000,n/a,n/a,n/a,n/a,n/a,n/a,32.549067200000003,35.859461549999999
+King Hussein Cancer Center,Amman,Private Hospitals,172.000000000000000,"87,4",n/a,n/a,n/a,n/a,n/a,32.004596470000003,35.875110200000002
+Esraa Hospital,Amman,Private Hospitals,129.000000000000000,"56,1",n/a,n/a,n/a,n/a,n/a,32.016867859999998,35.866019250000001
+Eyes Hospital,Amman,Private Hospitals,33.000000000000000,n/a,n/a,n/a,n/a,n/a,n/a,31.997603089999998,35.872478139999998
+Emn Alhethem Hospital,Amman,Private Hospitals,74.000000000000000,n/a,n/a,n/a,n/a,n/a,n/a,31.997214560000000,35.872280510000003
+Tla’a Ali Hospital,Amman,Private Hospitals,53.000000000000000,3,n/a,n/a,n/a,n/a,n/a,31.998212559999999,35.863602780000001
+Albayader Hospital,Amman,Private Hospitals,18.000000000000000,n/a,n/a,n/a,n/a,n/a,n/a,31.957826709999999,35.845519699999997
+Pheladelphea Hospital,Amman,Private Hospitals,31.000000000000000,"22,3",n/a,n/a,n/a,n/a,n/a,31.965127960000000,35.845384950000003
+Aldoale Hospital,Amman,Private Hospitals,53.000000000000000,n/a,n/a,n/a,n/a,n/a,n/a,31.953284100000001,35.852867920000001
+Arabe Center,Amman,Private Hospitals,139.000000000000000,"74,6",n/a,n/a,n/a,n/a,n/a,31.959305300000000,35.878541769999998
+Esteshare Hospital,Amman,Private Hospitals,108.000000000000000,n/a,n/a,n/a,n/a,n/a,n/a,31.965730019999999,35.885934900000002
+Shmaisani Hospital,Amman,Private Hospitals,80.000000000000000,"76,6",n/a,n/a,n/a,n/a,n/a,31.970424430000001,35.891935650000001
+Jordan Hospital,Amman,Private Hospitals,300.000000000000000,"46,7",n/a,n/a,n/a,n/a,n/a,31.960174150000000,35.900038449999997
+Jabal Amman Hospital,Amman,Private Hospitals,25.000000000000000,"23,6",n/a,n/a,n/a,n/a,n/a,31.954160630000001,35.900532530000000
+Kaldee Hospital,Amman,Private Hospitals,160.000000000000000,n/a,n/a,n/a,n/a,n/a,n/a,31.950593479999998,35.903802390000003
+Abed Alhadi Hospital,Amman,Private Hospitals,17.000000000000000,n/a,n/a,n/a,n/a,n/a,n/a,31.952293229999999,35.903200519999999
+Farah Hospital,Amman,Private Hospitals,61.000000000000000,"12,6",n/a,n/a,n/a,n/a,n/a,31.951691080000000,35.906398520000003
+Aqleh Hospital,Amman,Private Hospitals,30.000000000000000,"43,6",n/a,n/a,n/a,n/a,n/a,31.951950230000001,35.909749239999996
+Amman Hospital,Amman,Private Hospitals,65.000000000000000,"61,9",n/a,n/a,n/a,n/a,n/a,31.953230739999999,35.911860279999999
+Malhas Hospital,Amman,Private Hospitals,69.000000000000000,n/a,n/a,n/a,n/a,n/a,n/a,31.949533989999999,35.922244810000002
+Lozmela Hospital,Amman,Private Hospitals,58.000000000000000,"54,3",n/a,n/a,n/a,n/a,n/a,31.954899950000001,35.930473370000001
+Etali Hospital,Amman,Private Hospitals,47.000000000000000,n/a,n/a,n/a,n/a,n/a,n/a,31.944708920000000,35.932296950000001
+Helal Hospital,Amman,Private Hospitals,64.000000000000000,n/a,n/a,n/a,n/a,n/a,n/a,31.935484949999999,35.933150349999998
+Qudes Hospital,Amman,Private Hospitals,70.000000000000000,n/a,n/a,n/a,n/a,n/a,n/a,31.925802590000000,35.927904190000000
+El-Hanan Hospital,Amman,Private Hospitals,50.000000000000000,"25,8",n/a,n/a,n/a,n/a,n/a,31.909035220000000,35.928982169999998
+El-Hamaydeh Hospital,Amman,Private Hospitals,54.000000000000000,n/a,n/a,n/a,n/a,n/a,n/a,31.901279559999999,35.933851040000000
+Alaqsa Hospital,Amman,Private Hospitals,18.000000000000000,n/a,n/a,n/a,n/a,n/a,n/a,31.991249170000000,35.942582659999999
+Almoasah Hospital,Amman,Private Hospitals,40.000000000000000,n/a,n/a,n/a,n/a,n/a,n/a,31.979522979999999,35.978057139999997
+Marka Hospital,Amman,Private Hospitals,38.000000000000000,n/a,n/a,n/a,n/a,n/a,n/a,31.984308120000001,35.990319139999997
+Marka Islamic Hospital,Amman,Private Hospitals,38.000000000000000,n/a,n/a,n/a,n/a,n/a,n/a,31.988986340000000,35.991271349999998
+Esteqlal Hospital,Amman,Private Hospitals,114.000000000000000,n/a,n/a,n/a,n/a,n/a,n/a,31.978989590000001,35.916172199999998
+Alamal Hospital,Amman,Private Hospitals,33.000000000000000,n/a,n/a,n/a,n/a,n/a,n/a,31.974196549999998,35.911339259999998
+Palestine Hospital,Amman,Private Hospitals,46.000000000000000,"29,7",n/a,n/a,n/a,n/a,n/a,31.973945080000000,35.907530399999999
+Takasose Hospital,Amman,Private Hospitals,175.000000000000000,n/a,n/a,n/a,n/a,n/a,n/a,31.978799089999999,35.900388800000002
+Aljazera Hospital,Amman,Private Hospitals,40.000000000000000,n/a,n/a,n/a,n/a,n/a,n/a,31.979164850000000,35.898879630000003
+Heba Hospital,Amman,Private Hospitals,30.000000000000000,"50,2",n/a,n/a,n/a,n/a,n/a,31.967978190000000,35.916765079999998
+Abu Deyyeh Hospital,Amman,Private Hospitals,68.000000000000000,"15,7",n/a,n/a,n/a,n/a,n/a,31.969814780000000,35.917690350000001
+Eslame Hospital (Amman),Amman,Private Hospitals,273.000000000000000,"53,1",n/a,n/a,n/a,n/a,n/a,31.966819820000001,35.907817860000002
+Alahli Hospital,Amman,Private Hospitals,50.000000000000000,n/a,n/a,n/a,n/a,n/a,n/a,31.967787670000000,35.908006510000000
+Alhaeah Hospital,Amman,Private Hospitals,90.000000000000000,n/a,n/a,n/a,n/a,n/a,n/a,31.922836690000000,35.901709320000002
+Mua’ath Ben Jabal Hospital,Irbid,Governmental Hospitals,75.000000000000000,"41,4",4564,39837,48521,88358,828,32.612287750000000,35.607690730000002
+Abi Obidah Hospital in Al Rayan Valley,Irbid,Governmental Hospitals,60.000000000000000,"40,8",4252,35567,46191,81758,618,32.405801120000000,35.590137650000003
+Raya Hospital,Irbid,Governmental Hospitals,94.000000000000000,"57,5",6349,14368,24339,38707,2383,32.502493809999997,35.692132360000002
+Yarmouk Hospital,Irbid,Governmental Hospitals,67.000000000000000,"56,6",4711,29202,46336,75538,874,32.639577180000003,35.838036729999999
+Ramtha Public Hospital,Irbid,Governmental Hospitals,110.000000000000000,"54,6",10239,38401,42467,80868,1717,32.566504230000000,36.016244520000001
+Princess Basma Hospital,Irbid,Governmental Hospitals,202.000000000000000,"92,6",22202,179828,156460,336288,6253,32.557971639999998,35.839168610000002
+Rahmah Hospital,Irbid,Governmental Hospitals,112.000000000000000,"94,4",12358,21448,13521,34969,665,32.528665439999997,35.834901610000003
+Badee’ah Hospital,Irbid,Governmental Hospitals,98.000000000000000,"77,8",12888, ,29599,29599,5700,32.529347090000002,35.835045340000001
+Prince Faisal Hospital,Zarqa,Governmental Hospitals,178.000000000000000,"69,2",16259,61319,100069,161388,3632,32.033706940000002,36.047092659999997
+Zarqa Governmental Hospital,Zarqa,Governmental Hospitals,221.000000000000000,"74,8",21132,137543,146730,284273,7227,32.071440799999998,36.089349419999998
+Alkaramah Hospital,Amman,Governmental Hospitals,150.000000000000000,0,9,6203,4438,10641,0,31.878092580000001,35.811428630000002
+Jamil Totanji Hospital,Amman,Governmental Hospitals,140.000000000000000,76,13492,35500,47578,83078,4006,31.853991760000000,35.997730240000003
+Albasheer Hospital,Amman,Governmental Hospitals,1011.000000000000000,"70,1",84715,187670,234240,421910,23808,31.937726229999999,35.943085719999999
+Prince Hamza Hospital,Amman,Governmental Hospitals,433.000000000000000,"63,5",27569,0,0,0,0,31.984262399999999,35.937920409999997
+Al markez Alwatani,Amman,Governmental Hospitals,30.000000000000000,"31,1",355,3318,171,3489,156,32.046888150000001,35.901835079999998
+Prince Rashed ebn Alsussen Hospital,Irbid,Royal Services,292.000000000000000,"96,9",n/a,n/a,n/a,n/a,n/a,32.512061920000001,35.815749529999998
+Princess Haya Hospital,Aqaba,Royal Services,183.000000000000000,"66,5",n/a,n/a,n/a,n/a,n/a,29.531917579999998,35.007346620000000
+Prince Hashem ebn alhussen Hospital,Zarqa,Royal Services,232.000000000000000,"85,1",n/a,n/a,n/a,n/a,n/a,32.066606919999998,36.095808300000002
+Marka Center,Amman,Royal Services,34.000000000000000,60,n/a,n/a,n/a,n/a,n/a,31.981595550000002,35.990337099999998
+Queen Alia Military Hospital,Amman,Royal Services,239.000000000000000,n/a,n/a,n/a,n/a,n/a,n/a,32.001046520000003,35.919307320000001
+Queen Alia Centerl / Al Hussein Medical City,Amman,Royal Services,176.000000000000000,97,n/a,n/a,n/a,n/a,n/a,31.979926830000000,35.829430870000003
+Rehabilitation Center / Al Hussein Medical City,Amman,Royal Services,136.000000000000000,84,n/a,n/a,n/a,n/a,n/a,31.979050550000000,35.830787330000000
+Al Husain Hospital / Al Hussein Medical City,Amman,Royal Services,585.000000000000000,n/a,n/a,n/a,n/a,n/a,n/a,31.979309619999999,35.831353270000001
+Prince Hussein Center / Al Hussein Medical City,Amman,Royal Services,70.000000000000000,n/a,n/a,n/a,n/a,n/a,n/a,31.977686580000000,35.831344280000003
+Queen Rania Hospital/ Al Hussein Medical City,Amman,Royal Services,203.000000000000000,"85,1",n/a,n/a,n/a,n/a,n/a,31.977419879999999,35.830949019999998
+Asalam Hospital, ,Private Hospitals,30.000000000000000, , , , , , ,31.171240439999998,35.711607839999999
+Italy Hospital, ,Private Hospitals,38.000000000000000, , , , , , ,31.186527070000000,35.701816200000003
+Al-Bootas Hospital, ,Private Hospitals,30.000000000000000, , , , , , ,31.247549029999998,35.542212530000000
+Al-Mahabbeh Hospital, ,Private Hospitals,30.000000000000000, , , , , , ,31.721809950000001,35.807907239999999
+Al-Safa Hospital, ,Private Hospitals,15.000000000000000, , , , , , ,32.276290950000003,35.891145129999998
+Al-Noor Hospital, ,Private Hospitals,40.000000000000000, , , , , , ,32.306795340000001,36.172138150000002
+Al Rasheed Hospital, ,Private Hospitals,66.000000000000000, , , , , , ,32.074074590000002,35.872100850000002
+Al Rwashed hospital, ,Governmental Hospitals,17.000000000000000, , , , , , ,32.506137840000001,38.200947290000002
+Queen Rania Hospital, ,Governmental Hospitals,72.000000000000000, , , , , , ,30.270750600000000,35.452623539999998
+Ma'an Hospital, ,Governmental Hospitals,131.000000000000000, , , , , , ,30.191141200000001,35.727876330000001
+Ghoor Al-Safi Hospital, ,Governmental Hospitals,182.000000000000000, , , , , , ,31.042316759999999,35.487055970000000
+Al-Karak Governmental Hospital, ,Governmental Hospitals,125.000000000000000, , , , , , ,31.146579899999999,35.724831039999998
+Princess Salma Hospital (Theeban), ,Governmental Hospitals,38.000000000000000, , , , , , ,31.506883009999999,35.792051970000003
+Al Nadeem Governmental Hospital (Madaba), ,Governmental Hospitals,91.000000000000000, , , , , , ,31.716254650000000,35.777427400000001
+Al-Shouneh Hospital, ,Governmental Hospitals,48.000000000000000, , , , , , ,31.900105100000001,35.620294090000002
+Princess Iman Hospital, ,Governmental Hospitals,45.000000000000000, , , , , , ,32.152406370000001,35.615416240000002
+Prince Hussein Bin Abdullah, ,Governmental Hospitals,112.000000000000000, , , , , , ,32.090986850000000,35.841908470000000
+Fuhais Hospital, ,Governmental Hospitals,250.000000000000000, , , , , , ,31.991233940000001,35.769683919999999
+Al Hussein Hospital, ,Governmental Hospitals,152.000000000000000, , , , , , ,32.035412760000000,35.735026920000003
+Al Salt Hospital, ,Governmental Hospitals,152.000000000000000, , , , , , ,32.061407369999998,35.707089310000001
+Al Iman Al Hokomi Hospital, ,Governmental Hospitals,105.000000000000000, , , , , , ,32.321166890000001,35.754008319999997
+Jarash Hospital, ,Governmental Hospitals,135.000000000000000, , , , , , ,32.283566770000000,35.897289610000001
+Al Mafraq Governmental Hospital, ,Governmental Hospitals,66.000000000000000, , , , , , ,32.344712180000002,36.198324040000003
+Gynecoloy & Obstetrics and Children Hospital, ,Governmental Hospitals,108.000000000000000, , , , , , ,32.317796270000002,36.229172190000000
+Al Badeyah al Shamaleyyah, ,Governmental Hospitals,0.000000000000000, , , , , , ,32.265360940000001,36.456670539999998
+Prince Ali Hospital, ,Royal Services,147.000000000000000, , , , , , ,31.177289290000001,35.734703519999997
+Prince Zaid Hospital, ,Royal Services,120.000000000000000, , , , , , ,30.826073370000000,35.588026599999999

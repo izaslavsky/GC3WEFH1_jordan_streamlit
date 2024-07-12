@@ -1,0 +1,11 @@
+streamlit
+streamlit-keplergl
+pandas
+langchain
+langchain_groq
+groq
+geopandas
+folium
+streamlit_folium
+mapclassify
+matplotlib
