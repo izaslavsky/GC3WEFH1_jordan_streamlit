@@ -60,6 +60,9 @@ with st.sidebar:
         st.write('3. If you only want to work with Jordan data, choose the "Show Jordan Data only" checkbox to apply filtering.')
         st.write('4. Explore your data in the data information dropdown')
         st.write('5. Ask your data questions!')
+        st.write(' - Chart the average value over time')
+        st.write(' - Which year has the highest value')
+        st.write(' - Is the average value increasing over time?')
 
         st.write('### If it looks like your display is not loading, look at the top right corner of your browser and see if the LLM is running. ')
 
@@ -821,7 +824,10 @@ if 'df' in st.session_state and 'selected_dataset' in st.session_state:
 
     with st.expander(preview_txt):
         st.write('Preview of ' + st.session_state.selected_dataset['dataset_name'])
-        st.write(st.session_state.df.head())
+        display_df = st.session_state.df
+        display_df['Id'] = display_df['Id'].astype(str)
+        display_df['Time'] = display_df['Time'].astype(str)
+        st.write(display_df.head())
 
         if st.session_state.selected_dataset['dataset_type'] == 'WHO':
             st.write("Indicator Information")
