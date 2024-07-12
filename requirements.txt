@@ -13,3 +13,4 @@ google-generativeai
 pyyaml
 fuzzywuzzy
 mapclassify
+numba

@@ -229,13 +229,14 @@ with tab1:
                 df_filtered = df[df['Time'] == selected_time]
             else:
                 df_filtered = df
+
             map_column = col3.selectbox('Select a column to map:', df_filtered.columns)
             tooltip_options = col3.multiselect('Point Information:', df_filtered.columns, default=list(df_filtered.columns))
 
             map_gdf = create_map(df_filtered, map_column, tooltip_options)
             with col1:
                 st.write("")
-                folium_static(map_gdf)
+                folium_static(map_gdf, width=800, height=600)
             # folium_static(map_gdf, width=800, height=600)
                 
             # Display filtered data
@@ -351,6 +352,7 @@ with tab1:
                     k=1,
                     highlight=True,
                     width="100%",
+                    legend=True,
                     legend_kwds={"caption": f"{column_name} Statistics"},
                     style_kwds={'radius': 8}
                 )
@@ -363,9 +365,6 @@ with tab1:
             df = pd.read_csv("dataset/Jordan Health/Hospitals.csv")
             gdf1 = gpd.GeoDataFrame(df, geometry=gpd.points_from_xy(df.Longitude, df.Latitude))
 
-            print(df.columns)
-            print(gdf1.columns)
-            
             hospital_col1, hospital_col2 = st.columns([1,1])
             filter_values = hospital_col1.multiselect("Filter Map by Governorat", df['Governorat'].unique(), default=df['Governorat'].unique())
             if filter_values:
