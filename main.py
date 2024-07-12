@@ -236,7 +236,7 @@ with tab1:
             map_gdf = create_map(df_filtered, map_column, tooltip_options)
             with col1:
                 st.write("")
-                folium_static(map_gdf, width=800, height=600)
+                folium_static(map_gdf)
             # folium_static(map_gdf, width=800, height=600)
                 
             # Display filtered data
