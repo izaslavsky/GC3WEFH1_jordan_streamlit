@@ -289,7 +289,7 @@ with tab1:
                 gdf.crs = "EPSG:4326"
                 
                 m = gdf.explore(
-                    # column=selected_column,  
+                    column=selected_column,  
                     cmap="Blues",
                     scheme="FisherJenks",
                     tiles="CartoDB dark_matter",
@@ -298,6 +298,7 @@ with tab1:
                     k=1,
                     highlight=True,
                     width="100%",
+                    legend=True,
                     legend_kwds={"caption": f"{selected_column} Statistics"},
                     style_kwds={'radius': 8}
                 )
@@ -306,21 +307,23 @@ with tab1:
             # Main data loading
             df = load_data("dataset/Healthcare Facilities in Jordan/healthcare.csv")
 
-            facility_col1, facility_col2 = st.columns([1,1])
+            facility_col1, facility_col2, facility_col3 = st.columns([1,1,1])
 
         # Filter selector
             # filter_column = facility_col1.selectbox('Select a Column to Display:', df.columns)
             # filter_value_options = df[filter_column].unique().tolist()
             # filter_value_options.insert(0, "Choose a value")
-            filter_values = facility_col1.multiselect("Filter Map by Facility", df['Name_of_the_Facility'].unique(), default=df['Name_of_the_Facility'].unique())
+            filter_values = facility_col2.multiselect("Filter Map by Facility", df['Name_of_the_Facility'].unique(), default=df['Name_of_the_Facility'].unique())
             if filter_values:
                 df_filtered = df[df['Name_of_the_Facility'].isin(filter_values)].copy()
             else:
                 df_filtered = df.copy()
 
-            tooltip_options = facility_col2.multiselect('Columns On Map:', df_filtered.columns, default=list(df_filtered.columns))
+            map_column = facility_col1.selectbox('Select a column to map:', df_filtered.columns)
+            default_vals = ['Name_of_the_Facility', 'Year_Opened', 'Number_of_Practitioners', 'Religious_Affiliation', 'Language_Spoken']
+            tooltip_options = facility_col3.multiselect('Columns Displayed In ToolTip:', df_filtered.columns, default=default_vals)
 
-            map_gdf = create_map(df_filtered, 'Name', tooltip_options)
+            map_gdf = create_map(df_filtered, map_column, tooltip_options)
             folium_static(map_gdf, width=800, height=600)
 
             # Display filtered data
@@ -374,7 +377,7 @@ with tab1:
                 df_filtered = df.copy()
                 gdf_filtered = gdf1.copy()
 
-            tooltip_options = hospital_col2.multiselect('Columns On Map:', df_filtered.columns, default=list(df_filtered.columns))
+            tooltip_options = hospital_col2.multiselect('Columns Displayed In ToolTip', df_filtered.columns, default=list(df_filtered.columns))
 
             generate_map = st.button("Generate Map")
 
@@ -431,7 +434,7 @@ with tab1:
                 df_filtered = df.copy()
                 gdf_filtered = gdf1.copy()
 
-            tooltip_options = hospital_col2.multiselect('Columns On Map:', df_filtered.columns, default=list(df_filtered.columns))
+            tooltip_options = hospital_col2.multiselect('Columns Displayed In ToolTip', df_filtered.columns, default=list(df_filtered.columns))
 
             generate_map = st.button("Generate Map")
 
@@ -463,10 +466,10 @@ with tab1:
                 return gpd.GeoDataFrame(merged_data, geometry='geometry')#, id_name_df
 
             # Function to create Folium map and add GeoDataFrame
-            def create_map(gdf, tooltip_options):
+            def create_map(gdf, map_column, tooltip_options):
                 gdf.crs = "EPSG:4326"
                 m = gdf.explore(
-                    column="name", 
+                    column=map_column, 
                     cmap="Blues",
                     scheme="FisherJenks",
                     tiles="CartoDB dark_matter",
@@ -474,7 +477,9 @@ with tab1:
                     popup=True,
                     k=1,
                     highlight=True,
+                    legend=True,
                     width="100%",
+                    legend_kwds={"caption": f"{map_column} Statistics"},
                     style_kwds={'radius': 8}
                 )
                 
@@ -510,24 +515,23 @@ with tab1:
 
             boundary_col1, boundary_col2 = st.columns(2)
 
-            boundary_col1, boundary_col2 = st.columns([1,1])
-            filter_values = boundary_col1.multiselect("Filter Map by State", gdf['name'].unique(), default=gdf['name'].unique())
-            if filter_values:
-                # df_filtered = gdf[gdf['name'].isin(filter_values)].copy()
-                gdf_filtered = gdf[gdf['name'].isin(filter_values)].copy()
+            filter_columns = gdf.columns[16:]
+            filter_columns = [x for x in filter_columns if x != 'geometry' and x != 'Shape']
+
+            map_column = boundary_col1.selectbox('Select a column to map:', filter_columns)
+
+            if map_column:
+                gdf_filtered = gdf[gdf[map_column].notnull()]
             else:
-                # df_filtered = df.copy()
-                gdf_filtered = gdf1.copy()
+                gdf_filtered = gdf.copy()
+
 
             columns_not_geometry = [x for x in gdf_filtered.columns if x != 'geometry'][16:]
-            tooltip_options = boundary_col2.multiselect('Columns On Map:', columns_not_geometry, default=list(columns_not_geometry))
+            tooltip_options = boundary_col2.multiselect('Columns Displayed In ToolTip', columns_not_geometry, default=list(columns_not_geometry))
 
             generate_map = st.button("Generate Map")
 
-            print("tooltip_options")
-            print(tooltip_options)
-
-            map_gdf = create_map(gdf_filtered, tooltip_options)
+            map_gdf = create_map(gdf_filtered, map_column, tooltip_options)
             folium_static(map_gdf)
 
             # Display filtered data
@@ -536,7 +540,6 @@ with tab1:
                 index_cols = [list(gdf_filtered.columns).index(x) for x in tooltip_options]
                 gdf_filtered = gdf_filtered.iloc[:, index_cols]
                 df_filtered = pd.DataFrame(gdf_filtered)
-                print(df_filtered)
                 st.dataframe(df_filtered)
 
             # # Display ID and name reference table
