@@ -158,7 +158,7 @@ with tab1:
                 descriptive_columns = param['Description']            
                 selected_descriptive_column = st.selectbox("Select a Column to Display", descriptive_columns)
                 selected_column = param[param['Description'] == selected_descriptive_column]['Parameter'].iloc[0].strip()
-                generate_map = st.button("Generate Map")
+                # generate_map = st.button("Generate Map")
 
             with household_col2:
                 filter_values = st.multiselect("Filter Map by State", gdf['name'].unique(), default=gdf['name'].unique())
@@ -167,15 +167,16 @@ with tab1:
                 else:
                     filtered_gdf = gdf.copy()
 
+            # household_map_col1 = st.columns(1)
             # Display map when 'Generate Map' button is clicked
-            if generate_map:
-                with household_col1:
-                    if map_choice1 == "Jordan Population Average Statistics By State":
-                        map_to_display = create_map(filtered_gdf, selected_column)
-                    elif map_choice1 == "Jordan Population Average Statistics":
-                        map_to_display = create_map(gdf_jordan, selected_column)
-                    # folium_static(map_to_display)
-                    folium_static(map_to_display, width=1087, height=600)
+            # if generate_map:
+            # with household_map_col1:
+            if map_choice1 == "Jordan Population Average Statistics By State":
+                map_to_display = create_map(filtered_gdf, selected_column)
+            elif map_choice1 == "Jordan Population Average Statistics":
+                map_to_display = create_map(gdf_jordan, selected_column)
+            # folium_static(map_to_display)
+            folium_static(map_to_display)
             
             st.write("Data Displayed on Map:")
             filtered_gdf['geometry'] = filtered_gdf['geometry'].astype(str)
@@ -513,7 +514,7 @@ with tab1:
                 # gdf_jordan, id_name_df = prepare_data("dataset/Jordan Boundaries/country.csv", "jordan_admin_regions.shp")
                 gdf = gdf_jordan
 
-            boundary_col1, boundary_col2 = st.columns(2)
+            boundary_col1, boundary_col2 = st.columns([1,2])
 
             filter_columns = gdf.columns[16:]
             filter_columns = [x for x in filter_columns if x != 'geometry' and x != 'Shape']
@@ -524,7 +525,6 @@ with tab1:
                 gdf_filtered = gdf[gdf[map_column].notnull()]
             else:
                 gdf_filtered = gdf.copy()
-
 
             columns_not_geometry = [x for x in gdf_filtered.columns if x != 'geometry'][16:]
             tooltip_options = boundary_col2.multiselect('Columns Displayed In ToolTip', columns_not_geometry, default=list(columns_not_geometry))
@@ -649,14 +649,14 @@ with tab1:
         if map_choice1 in ["Soviet"]:
 
             gdf = gpd.read_file("dataset/Soviet/layer_0.shp")
-            generate_map = st.button("Generate Map")
-            if generate_map:
-                with st.spinner("Generating map..."):
-                    m = gdf.explore()
-                    folium_static(m, width=800, height=600)
-                    st.subheader("Generated GeoDataFrame")
-                    gdf['geometry'] = gdf['geometry'].astype(str)
-                    st.dataframe(gdf, width=1300)
+            # generate_map = st.button("Generate Map")
+            # if generate_map:
+            with st.spinner("Generating map..."):
+                m = gdf.explore()
+                folium_static(m, width=800, height=600)
+                st.subheader("Generated GeoDataFrame")
+                gdf['geometry'] = gdf['geometry'].astype(str)
+                st.dataframe(gdf, width=1300)
 
     # # Function to load datasets from the "datasets" directory based on results.csv
     # def load_datasets_from_results_csv(results_csv_path):
