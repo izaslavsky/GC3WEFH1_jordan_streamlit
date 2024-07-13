@@ -278,8 +278,8 @@ with tab1:
 
 
     if map_type_choice in ["Healthcare"]:
-        map_choice3 = col2.selectbox("Choose a Dataset", ["", "Healthcare Facilities in Jordan","Jordan Health","Jordan Health Map"])  
-        if map_choice3 in ["Healthcare Facilities in Jordan"]:
+        map_choice3 = col2.selectbox("Choose a Dataset", ["Healthcare Facilities","Hospitals","Health Activities and Projects"])  
+        if map_choice3 in ["Healthcare Facilities"]:
             def load_data(csv_path):
                 data = pd.read_csv(csv_path)
                 return data
@@ -334,7 +334,7 @@ with tab1:
                 df_filtered = df_filtered.iloc[:, index_cols]
                 st.dataframe(df_filtered)
         
-        if map_choice3 in ["Jordan Health"]:
+        if map_choice3 in ["Hospitals"]:
             def prepare_data(csv_path, shp_path):
                 csv_data = pd.read_csv(csv_path)
                 shp_data = gpd.read_file(shp_path)
@@ -392,7 +392,7 @@ with tab1:
                 df_filtered = df_filtered.iloc[:, index_cols]
                 st.dataframe(df_filtered)
 
-        if map_choice3 in ["Jordan Health Map"]:
+        if map_choice3 in ["Health Activities and Projects"]:
             def prepare_data(csv_path, shp_path):
                 csv_data = pd.read_csv(csv_path)
                 shp_data = gpd.read_file(shp_path)
