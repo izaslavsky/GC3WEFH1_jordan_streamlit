@@ -380,7 +380,7 @@ with tab1:
 
             tooltip_options = hospital_col2.multiselect('Columns Displayed In ToolTip', df_filtered.columns, default=list(df_filtered.columns))
 
-            generate_map = st.button("Generate Map")
+            # generate_map = st.button("Generate Map")
 
             map_gdf = create_map(gdf_filtered, 'Governorat', tooltip_options)
             folium_static(map_gdf)
@@ -437,7 +437,7 @@ with tab1:
 
             tooltip_options = hospital_col2.multiselect('Columns Displayed In ToolTip', df_filtered.columns, default=list(df_filtered.columns))
 
-            generate_map = st.button("Generate Map")
+            # generate_map = st.button("Generate Map")
 
             map_gdf = create_map(gdf_filtered, 'Governorat', tooltip_options)
             folium_static(map_gdf)
@@ -529,7 +529,7 @@ with tab1:
             columns_not_geometry = [x for x in gdf_filtered.columns if x != 'geometry'][16:]
             tooltip_options = boundary_col2.multiselect('Columns Displayed In ToolTip', columns_not_geometry, default=list(columns_not_geometry))
 
-            generate_map = st.button("Generate Map")
+            # generate_map = st.button("Generate Map")
 
             map_gdf = create_map(gdf_filtered, map_column, tooltip_options)
             folium_static(map_gdf)
