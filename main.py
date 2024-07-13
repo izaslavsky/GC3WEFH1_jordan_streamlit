@@ -818,7 +818,7 @@ with tab2:
     # Display the data
 
     if 'df' in st.session_state and 'selected_dataset' in st.session_state:
-        preview_txt = 'Data Table'
+        preview_txt = 'Data Table (5 sample records)'
         if 'dataset_type' in st.session_state and st.session_state.dataset_type == 'WHO':
             preview_txt = "Dataset Information"
 
