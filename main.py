@@ -100,8 +100,8 @@ with tab1:
 
     # Choose map type with dropdown
     col1, col2, col3 = st.columns(3)
-    map_type_choice = col1.selectbox("Choose a Topic", ["", "Household", "Climate","Healthcare","Administrative"])
-    if map_type_choice in ["Household"]:
+    map_type_choice = col1.selectbox("Choose a Topic", ["", "Population", "Climate","Healthcare","Administrative"])
+    if map_type_choice in ["Population"]:
         map_choice1 = col2.selectbox("Choose a Dataset", ["", "Population Average Statistics By Governorate", "Jordan Population Average Statistics"])
         # Display other functionalities only if a map type is selected
         if map_choice1 in ["Population Average Statistics By Governorate", "Jordan Population Average Statistics"]:
