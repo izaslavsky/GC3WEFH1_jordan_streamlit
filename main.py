@@ -102,9 +102,9 @@ with tab1:
     col1, col2, col3 = st.columns(3)
     map_type_choice = col1.selectbox("Choose a Topic", ["", "Household", "Climate","Healthcare","Administrative"])
     if map_type_choice in ["Household"]:
-        map_choice1 = col2.selectbox("Choose a Dataset", ["", "Jordan Population Average Statistics By Governorate", "Jordan Population Average Statistics"])
+        map_choice1 = col2.selectbox("Choose a Dataset", ["", "Population Average Statistics By Governorate", "Jordan Population Average Statistics"])
         # Display other functionalities only if a map type is selected
-        if map_choice1 in ["Jordan Population Average Statistics By Governorate", "Jordan Population Average Statistics"]:
+        if map_choice1 in ["Population Average Statistics By Governorate", "Jordan Population Average Statistics"]:
             # Function to read, clean, and merge data
             def prepare_data(csv_path, shp_path):
                 csv_data = pd.read_csv(csv_path)
@@ -137,7 +137,7 @@ with tab1:
                 return m
 
             # Generate gdf and ID name reference table
-            if map_choice1 == "Jordan Population Average Statistics By Governorate":
+            if map_choice1 == "Population Average Statistics By Governorate":
                 gdf_jstates, id_name_df = prepare_data("dataset/Average Household Size in Jordan/governorate.csv", "jordan_admin_regions.shp")
                 gdf = gdf_jstates
             elif map_choice1 == "Jordan Population Average Statistics":
@@ -171,7 +171,7 @@ with tab1:
             # Display map when 'Generate Map' button is clicked
             # if generate_map:
             # with household_map_col1:
-            if map_choice1 == "Jordan Population Average Statistics By Governorate":
+            if map_choice1 == "Population Average Statistics By Governorate":
                 map_to_display = create_map(filtered_gdf, selected_column)
             elif map_choice1 == "Jordan Population Average Statistics":
                 map_to_display = create_map(gdf_jordan, selected_column)
