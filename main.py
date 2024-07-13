@@ -451,10 +451,10 @@ with tab1:
 
     if map_type_choice in ["Administrative"]:
 
-        map_choice1 = col2.selectbox("Choose a Dataset", ["Please select a map type", "Boundaries of Jordan States", "Boundaries of Jordan"])
-        # map_choice1 = col2.selectbox("Choose a Dataset", ["Please select a map type", "Boundaries of Jordan States", "Boundaries of Jordan","Jordan Purchasing Power per Capita","Jordan Purchasing Power"])
+        map_choice1 = col2.selectbox("Choose a Dataset", ["", "Boundaries of Governorates", "Boundaries of Jordan"])
+        # map_choice1 = col2.selectbox("Choose a Dataset", ["", "Boundaries of Governorates", "Boundaries of Jordan","Jordan Purchasing Power per Capita","Jordan Purchasing Power"])
         # Display other functionalities only if a map type is selected
-        if map_choice1 in ["Boundaries of Jordan States", "Boundaries of Jordan"]:
+        if map_choice1 in ["Boundaries of Governorates", "Boundaries of Jordan"]:
             # Function to read, clean, and merge data
             def prepare_data(csv_path, shp_path):
                 csv_data = pd.read_csv(csv_path)
@@ -505,7 +505,7 @@ with tab1:
                 # return m
 
             # Generate gdf and ID name reference table
-            if map_choice1 in ["Boundaries of Jordan States"]:
+            if map_choice1 in ["Boundaries of Governorates"]:
                 gdf_jstates = prepare_data("dataset/Jordan Boundaries/governorate.csv", "jordan_admin_regions.shp")
                 # gdf_jstates, id_name_df = prepare_data("dataset/Jordan Boundaries/governorate.csv", "jordan_admin_regions.shp")
                 gdf = gdf_jstates
