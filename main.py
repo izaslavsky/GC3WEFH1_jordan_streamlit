@@ -451,8 +451,8 @@ with tab1:
 
     if map_type_choice in ["Administrative"]:
 
-        map_choice1 = col2.selectbox("Choose a Dataset", ["Please select a map type", "Boundaries of Jordan States", "Boundaries of Jordan","Soviet"])
-        # map_choice1 = col2.selectbox("Choose a Dataset", ["Please select a map type", "Boundaries of Jordan States", "Boundaries of Jordan","Soviet","Jordan Purchasing Power per Capita","Jordan Purchasing Power"])
+        map_choice1 = col2.selectbox("Choose a Dataset", ["Please select a map type", "Boundaries of Jordan States", "Boundaries of Jordan"])
+        # map_choice1 = col2.selectbox("Choose a Dataset", ["Please select a map type", "Boundaries of Jordan States", "Boundaries of Jordan","Jordan Purchasing Power per Capita","Jordan Purchasing Power"])
         # Display other functionalities only if a map type is selected
         if map_choice1 in ["Boundaries of Jordan States", "Boundaries of Jordan"]:
             # Function to read, clean, and merge data
