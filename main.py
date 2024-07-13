@@ -370,7 +370,7 @@ with tab1:
             gdf1 = gpd.GeoDataFrame(df, geometry=gpd.points_from_xy(df.Longitude, df.Latitude))
 
             hospital_col1, hospital_col2 = st.columns([1,1])
-            filter_values = hospital_col1.multiselect("Filter Map by Governorat", df['Governorat'].unique(), default=df['Governorat'].unique())
+            filter_values = hospital_col1.multiselect("Filter Map by Governorate", df['Governorat'].unique(), default=df['Governorat'].unique())
             if filter_values:
                 df_filtered = df[df['Governorat'].isin(filter_values)].copy()
                 gdf_filtered = gdf1[gdf1['Governorat'].isin(filter_values)].copy()
