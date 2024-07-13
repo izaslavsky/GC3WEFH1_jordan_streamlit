@@ -17,8 +17,8 @@ if start_choice == "Overview":
     st.markdown("* 4. Download (filtered) dataset")
 
     st.title('Jordan Public Datasets')
-    type_choice = st.selectbox("Choose a map", ["Please select a map type", "Household", "Climate","Healthcare","Administrative"])
-    if type_choice in ["Household"]:
+    type_choice = st.selectbox("Choose a map", ["Please select a map type", "Population", "Climate","Healthcare","Administrative"])
+    if type_choice in ["Population"]:
         st.image("overview/Average Household Size in Jordan.png", use_column_width=True)
     if type_choice in ["Climate"]:
         st.markdown("## Jordan SPI")
@@ -37,8 +37,8 @@ if start_choice == "Overview":
 if start_choice == "Start!":
     st.title("Map Visualization")
 # Choose map type with dropdown
-    map_type_choice = st.selectbox("Choose a type", ["Please select a map type", "Household", "Climate","Healthcare","Administrative"])
-    if map_type_choice in ["Household"]:
+    map_type_choice = st.selectbox("Choose a type", ["Please select a map type", "Population", "Climate","Healthcare","Administrative"])
+    if map_type_choice in ["Population"]:
         map_choice1 = st.selectbox("Choose a map", ["Please select a map type", "Average Household Size in Jordan States", "Average Household Size in Jordan"])
         # Display other functionalities only if a map type is selected
         if map_choice1 in ["Average Household Size in Jordan States", "Average Household Size in Jordan"]:
